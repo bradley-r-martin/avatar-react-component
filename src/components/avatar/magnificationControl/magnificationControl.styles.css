@@ -1,0 +1,77 @@
+div.magnificationControl {
+    display: inline-block;
+    width: 150px;
+    padding: 5px;
+    box-sizing: border-box;
+    display: box;
+    display: -moz-box;
+    display: -webkit-box;
+    float:left;
+}
+div.magnificationControl span {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABJlBMVEUAAAAAbe0AbfAAbfAAbfAAbe8AbvEAbfAAbe8AcO8Aa+0AbfAAbfAAbfAAbPEAbPAAbfAAbfAAbfAAZv8AbPAAbfAAcPMAAP8AgP8Abu4Abe8AgP8AbfAAbvAAbe8AbPEAbPAAbO8AbvEAbPAAbfAAbfEAbPAAbe8AbfAAbe8AcPUAbPEAbfAAbPAAavQAb+4AbvAAbe8AbfAAbfAAbfEAbfAAavEAVf8AbPAAbfAAZu4AbfAAbe8AbfAAbfAAbfAAbfAAbe0AbfEAa/IAbPAAbO8AbfAAcewAbfAAbu8AbfEAbfAAc/IAZuYAau0AbfAAbfEAbu8AbPAAbfAAgP8AbfEAbO8AbfAAbe8AbfAAbfAAbfAAauoAbe8AbfAAbfAAbfAAAABUmlQjAAAAYHRSTlMADozN+mBY0ZMQK+L18FpV+PvjBc+2KQECLFIEzodwaqdQSK6osDSB99UZXOpCGDyqg9N1bOAkA8j+D6s/vorutxyfOeRxhRumUbL5FAodr41yhNIG1E69Mcbf2QzF8skNlaFuAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAAN1wAADdcBQiibeAAAAAd0SU1FB+IIGgoEJ1R9GaoAAAFiSURBVDjLfZPnVsJAEIVHwaCIogQUUBQQAkjvvRfpKqLYve//FCbhhKBkuX+mfWd3ZvcMEe3s6vQQtUcrcVKsN+wfSIHxEDAdiTpWAfOJqFPAYiTirbCdnZOG7A4brDw5oeOJoYtLOMmFK2LqGi5yw8MGvLgh33bA/w/gBYHfAvCBIBAM8EzAD4RCEJPrgOC5VcIwIlGiaARhJRPj4ustJZCUTBIJRs8pGOW3R4oB+JGWTHqtib/KIJsjymWRYQD5Aoo2WxGFPAMolSGrXNKuVywwVWu1qgmWilY9VkejKTnNBuoxzRlaitvSmqONzurqUgftVSHOLY/roqfSPXRle8e1xZO9st/HQAUG6MvWA98KGI7GKjAeDTeAyXS9o+lkA9CUBNxvB9z0wPwaUY+YiWv4NGfV5894Id6AhaC5W/nXBd7sRI735R+CU2vK8n7kpOhz9vUtJcwqIK//6GcmDvsLvb9JzxkZpE4AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDgtMjZUMTA6MDQ6MzkrMDI6MDBozFbeAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTA4LTI2VDEwOjA0OjM5KzAyOjAwGZHuYgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII=);
+    background-size: 15px 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    -moz-box-flex: none;
+    -webkit-box-flex: none;
+    box-flex: none;
+}
+div.magnificationControl span.min {
+    background-size: 10px 10px;
+    background-position: 4px 6px;
+}
+div.magnificationControl span.max {
+    background-position: 2px 3px;
+    background-size: 15px 15px;
+}
+div.magnificationControl input[type=range] {
+    display: block;
+    width: 100%;
+    -webkit-appearance: none;
+    outline: none;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+div.magnificationControl input[type=range]::-webkit-slider-runnable-track {
+    position: relative;
+    height: 4px;
+    border: 1px solid #b2b2b2;
+    border-radius: 5px;
+    background-color: #e2e2e2;
+    box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+div.magnificationControl input[type=range]::-webkit-slider-thumb {
+    position: relative;
+    top: -5px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #999;
+    -webkit-appearance: none;
+    background-color: #fff;
+    box-shadow: inset 0 -1px 2px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 100%;
+    cursor: pointer;
+}
+div.magnificationControl:not(.disabled) input[type=range]:active::-webkit-slider-thumb {
+    top: -7px;
+    width: 16px;
+    height: 16px;
+}
+div.magnificationControl:not(.disabled) input[type=range]:hover::-webkit-slider-thumb {
+    border-color: #006DF0;
+}
+
+
+div.magnificationControl.disabled{
+    opacity: 0.3;
+}
+div.magnificationControl.disabled input[type=range]::-webkit-slider-thumb{
+    cursor: default;
+}

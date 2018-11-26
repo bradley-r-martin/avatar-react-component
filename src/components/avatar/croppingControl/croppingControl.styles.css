@@ -1,0 +1,46 @@
+div.croppingControl canvas{
+  max-width:570px!important;
+  max-height:500px!important;
+  display:block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: grab;
+}
+div.croppingControl.drop{
+  border: 5px dotted #666;
+}
+/* div.croppingControl.drop input[type=file] {
+  display:block;
+} */
+div.croppingControl input[type=file] {
+  display:none;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+div.croppingControl{
+  width:570px!important;
+  height:500px!important;
+  text-align: center;
+  position: relative;
+  border:1px solid #ccc;
+  background:#eee;
+  overflow: hidden;
+}
+div.croppingControl div.output{
+  position: absolute;
+  display:block;
+  top: 50%;
+  left: 50%;
+  margin-top:12px;
+  transform: translate(-50%, -50%);
+}
+
+div.croppingControl div.output span.dimensions{
+  display:block;
+  padding-top:10px;
+  font-size:10px;
+}
